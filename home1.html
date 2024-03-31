@@ -6,13 +6,25 @@
 <title>Add a video</title>
 <style>
   h1{
+    margin-top: 200px;
+    font-size: 350%;
+    margin-left: 15px;
+  }
+  h2{
     text-align: center;
-    padding-right: 50%;
-    font-size: 500%;
   }
   div {
-    padding-left: 35%;
+    /* padding-left: 30%; */
     padding-top: 8%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: fit-content;
+  }
+
+  .hidden h2{
+      text-align: center;
+      padding: 0 auto;
   }
   .hidden {
     display: none;
@@ -20,40 +32,39 @@
 </style>
 </head>
 <body>
-  <div id="loadingScreen">
+  <div id="loadingScreen" class="hidden">
     <h1>Loading...</h1>
   </div>
-  <div id="videoContainer" class="hidden">
+  <div id="videoContainer">
     <video id="myVideo" width="520" height="440" controls autoplay>
       <source src="/WhatsApp Video 2024-03-31 at 8.16.41 PM.mp4" type="video/mp4">
     </video>
   </div>
   <div id="okText" class="hidden">
-    <h1>APRIL FOOOOOOOL........!</h1>
-    <h2> Send Your feedback @circledevproject@gmail.com </h2>
+    <h2>Your profile found match with 50 Users.</h2> 
+    <h2>Go to Premium Version to chat with them.</h2>
+    <h2>Give feedback @circledevproject@gmail.com</h2>
+    <h1>APRIL FOOOOOL...!</h1>
   </div>
 
   <script>
-    // Wait for the page to load
     document.addEventListener("DOMContentLoaded", function() {
       var loadingScreen = document.getElementById("loadingScreen");
       var videoContainer = document.getElementById("videoContainer");
       var okText = document.getElementById("okText");
       var myVideo = document.getElementById("myVideo");
 
-      // // Show the loading screen for 5 seconds
-      // setTimeout(function() {
-      //   loadingScreen.classList.add("hidden");
-      //   videoContainer.classList.remove("hidden");
-      //   myVideo.load(); // Load the video
-      //   myVideo.play(); // Play the video
+      // Load the video
+      myVideo.load(); 
 
-        // Listen for the video ended event
-        myVideo.addEventListener('ended', function() {
-          videoContainer.classList.add("hidden");
-          okText.classList.remove("hidden");
-        });
-      }, 3000); // 5 seconds delay
+      // Listen for the video ended event
+      myVideo.addEventListener('ended', function() {
+        videoContainer.classList.add("hidden");
+        okText.classList.remove("hidden");
+      });
+
+      // Hide loading screen
+      loadingScreen.classList.add("hidden");
     });
   </script>
 </body>
