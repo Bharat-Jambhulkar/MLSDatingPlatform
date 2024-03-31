@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Add a video</title>
+<style>
+  h1{
+    text-align: center;
+    padding-right: 50%;
+    font-size: 500%;
+  }
+  div {
+    padding-left: 35%;
+    padding-top: 8%;
+  }
+  .hidden {
+    display: none;
+  }
+</style>
+</head>
+<body>
+  <div id="loadingScreen">
+    <h1>Loading...</h1>
+  </div>
+  <div id="videoContainer" class="hidden">
+    <video id="myVideo" width="520" height="440" controls autoplay>
+      <source src="/WhatsApp Video 2024-03-31 at 8.16.41 PM.mp4" type="video/mp4">
+    </video>
+  </div>
+  <div id="okText" class="hidden">
+    <h1>APRIL FOOOOOOOL........!</h1>
+  </div>
+
+  <script>
+    // Wait for the page to load
+    document.addEventListener("DOMContentLoaded", function() {
+      var loadingScreen = document.getElementById("loadingScreen");
+      var videoContainer = document.getElementById("videoContainer");
+      var okText = document.getElementById("okText");
+      var myVideo = document.getElementById("myVideo");
+
+      // Show the loading screen for 5 seconds
+      setTimeout(function() {
+        loadingScreen.classList.add("hidden");
+        videoContainer.classList.remove("hidden");
+        myVideo.load(); // Load the video
+        myVideo.play(); // Play the video
+
+        // Listen for the video ended event
+        myVideo.addEventListener('ended', function() {
+          videoContainer.classList.add("hidden");
+          okText.classList.remove("hidden");
+        });
+      }, 2000); // 5 seconds delay
+    });
+  </script>
+</body>
+</html>

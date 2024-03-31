@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maximum Likelihood Soulmate</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-image: linear-gradient(
+        to right bottom,
+        #aff7e0,
+        #baf7d4,
+        #c7f6c9,
+        #d6f4c0,
+        #e5f2b8,
+        #f0ecb4,
+        #f8e5b2,
+        #ffdfb3,
+        #ffd5b9,
+        #ffcec8,
+        #ffc9db,
+        #ffc9ee
+      );
+        }
+        form{
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            /* background-color: #e45070; */
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            background-image: linear-gradient(
+        to right,
+        #f7c0f7,
+        #fed455
+      );
+        }
+        h2 {
+            text-align: center;
+            color: #040404;
+            padding: 10px 0;
+            background-color: #333;
+            color: #fff;
+            border-radius: 10px 10px 0 0;
+            margin-top: 0;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            color: #0f0f0f;
+        }
+        input[type="text"], input[type="email"], select, input[type="checkbox"] {
+            width: calc(50% - 10px);
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+        .row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        .center {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        input[type="button"] {
+            width: 100%;
+            padding: 15px;
+            border: none;
+            border-radius: 5px;
+            background-color: #000;
+            color: #fff;
+            cursor: pointer;
+            font-size: 18px;
+            background-image: url('heart.png');
+            background-size: 20px;
+            background-repeat: no-repeat;
+            background-position: left center;
+            padding-left: 40px;
+        }
+        input[type="button"]:hover {
+            background-color: #333;
+        }
+    </style>
+</head>
+<body>
+    <form id="datingForm">
+        <h2>Maximum Likelihood Soulmate</h2>
+        <div class="row">
+            <label for="name">Name:</label>
+            <label for="email">Email:</label>
+        </div>
+        <div class="row">
+            <input type="text" id="name" name="name" required>
+            <input type="email" id="email" name="email" required>
+        </div>
+        <div class="center"><h3>Your Statistician Soulmate Preferences</h3></div>
+        <!-- <div class="row">
+            <label for="educationLevel">Education Level:</label>
+            <select id="educationLevel" name="educationLevel" required>
+                <option value="Post Graduate">Post Graduate</option>
+                <option value="Graduate">Graduate</option>
+            </select>
+        </div> -->
+        <div class="row">
+            <label for="partnerEducationLevel">Education Level of Partner:</label>
+            <select id="partnerEducationLevel" name="partnerEducationLevel" required>
+                <option value="Post Graduate">Post Graduate</option>
+                <option value="Graduate">Graduate</option>
+            </select>
+        </div>
+        <!-- <div class="row">
+            <label for="gender">Your Gender:</label>
+            <select id="gender" name="gender" required>
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+            </select>
+        </div> -->
+        <div class="row">
+            <label for="gender">Looking For?:</label>
+            <select id="gender" name="gender" required>
+                <option value="Male">Female</option>
+                <option value="Female">Male</option>
+            </select>
+        </div>
+        <div class="row">
+            <label for="estimationMethod">Your Favorite Subject:</label>
+            <select id="estimationMethod" name="estimationMethod" required>
+                <option value="Inference">Inference</option>
+                <option value="Distribution Theory">Distribution Theory</option>
+                <option value="Sampling Techniques">Sampling Techniques</option>
+                <option value="Regression Analysis">Regression Analysis</option>
+                <option value="Stochastic Processes">Stochastic Processes</option>
+                <option value="Optimization Techniques">Optimization Techniques</option>
+                <option value="Multivariate Analysis">Multivariate Analysis</option>
+                <option value="Time Series Analysis">Time Series Analysis</option>
+                <option value="Bayesian Inference">Bayesian Inference</option>
+            </select>
+        </div>
+        <div class="row">
+            <label for="softwareUsed">Your Favorite Software/Language:</label>
+            <select id="softwareUsed" name="softwareUsed" required>
+                <option value="R">R</option>
+                <option value="Python">Python</option>
+                <option value="Minitab">Minitab</option>
+                <option value="Tableau">Tableau</option>
+                <option value="MATLAB">MATLAB</option>
+            </select>
+        </div>
+        <div class="row">
+            <label for="estimationMethod">Your Favorite Method of Estimation:</label>
+            <select id="estimationMethod" name="estimationMethod" required>
+                <option value="Maximum Likelihood Estimation">Maximum Likelihood Estimation</option>
+                <option value="Method of Moments">Method of Moments</option>
+                <option value="Least Square Principle">Least Square Principle</option>
+                <option value="Method of Quantiles">Method of Quantiles</option>
+            </select>
+        </div>
+        <div class="row">
+            <label for="workPreference">Where you want to work:</label>
+            <select id="workPreference" name="workPreference" required>
+                <option value="Government Organizations">Government Organizations</option>
+                <option value="Research Institute">Research Institute</option>
+                <option value="Corporate">Corporate</option>
+            </select>
+        </div>
+        <a href="home1.html"><input type="button" value="Find My Match"></a>
+    </form>
+    <div>
+        <p>&#169;Circle Developers 2024.</p>
+    </div>
+</body>
+</html>
